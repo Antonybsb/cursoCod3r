@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title>Novo Produto</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="product.name" name="name"> <!-- matInput é uma diretiva de estilo e comportamento-->
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" 
+            [(ngModel)]="product.price" name="price"> <!-- Aqui foi usado a técnica de Two-way Data Binding através do ngModel que é uma diretiva não estrutural-->
+        </mat-form-field>
+
+    </form>
+
+    <button mat-raised-button (click)="createProduct()" color="primary" >
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()" >
+        Cancelar
+    </button>
+</mat-card>
